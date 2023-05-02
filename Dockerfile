@@ -1,7 +1,7 @@
 FROM python:3
 
-COPY classes.py main.py Test.py TestDriver.py CS333Final-Image /home/deassa/CS333/CS333FinalProject/
+COPY classes.py main.py Test.py TestDriver.py /app/
 
-WORKDIR /home/deassa/CS333/CS333FinalProject/S333FinalProject
+WORKDIR /app
 
 ENTRYPOINT ["python", "main.py"]
