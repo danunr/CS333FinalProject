@@ -18,7 +18,7 @@ class testCases(unittest.TestCase):
 	
 	def test_black_pawn_at_init(self):
 		game = Game()
-		self.assertEqual(str(game.gameboard[(0, 6)]), "♟")
+		self.assertEqual(str(game.gameboard[(0, 3)]), "♟")
 		
 	def test_white_pawn_at_init(self):
 		game = Game()

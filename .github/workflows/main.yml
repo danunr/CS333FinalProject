@@ -25,7 +25,6 @@ jobs:
       run:
         python3 -m unittest TestDriver.py
         coverage run TestDriver.py
-        #coverage report
 
   buildimage:
     runs-on: ubuntu-latest
