@@ -1,11 +1,9 @@
-# syntax=docker/dockerfile:1
-FROM busybox:latest
-COPY --chmod=755 <<EOF /app/run.sh
-#!/bin/sh
-while true; do
-  echo -ne "The time is now $(date +%T)\\r"
-  sleep 1
-done
-EOF
+FROM python:3
 
-ENTRYPOINT /app/run.sh
+RUN pip install coverage
+RUN pip install unittest
+
+WORKDIR /usr/src/app
+
+ENTRYPOINT ["python", "main.py"]
+
