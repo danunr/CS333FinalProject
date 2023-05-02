@@ -7,9 +7,36 @@ on:
   pull_request:
     branches:
       - "main"
-      
+    
+
+jobs:   
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3
+        
+    - name: Install dependencies
+      run: 
+        python -m pip install --upgrade pip
+        pip install unittest
+        pip install coverage
+        
+    - name: Run tests
+      run:
+        python -m unittest discover
+        python -m coverage
+
+
 env:
   IMAGE_NAME: CS333Final-Image
+<<<<<<< HEAD
 
 
 jobs:
@@ -29,6 +56,26 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+=======
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build Docker image
+      run: docker build -t ${{ env.IMAGE_NAME }}      
+
+    - name: Push Docker image
+      run: docker push ${{ env.IMAGE_NAME }}
+>>>>>>> 1fe6fea688859a85f3ef74c7c04ac090276b526f
 
     - name: Run Unit Tests
       run:
