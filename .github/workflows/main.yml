@@ -1,13 +1,7 @@
 name: Test and Build Docker for CI
 
 
-on:
-  push:
-    branches:
-      - "main"
-  pull_request:
-    branches:
-      - "main"
+on: [push]
 
 
 jobs:   
