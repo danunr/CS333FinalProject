@@ -11,15 +11,15 @@ from classes import Bishop
 from classes import Queen
 from classes import King
 from classes import Pawn
-
 import time
 
-print("VISUAL TEST RIGHT NOW")
-
-time.sleep(50)
 
 
 def main():
+	print("TEST FOR CLASS")
+	time.sleep(50)
+
+
 	game = Game()
 	
 	while True:
@@ -52,6 +52,5 @@ def main():
 				print(target.availableMoves(startpos[0], startpos[1], game.gameboard))
 		else:
 			game.message = "there is no piece in that space"
-
 
 main()
