@@ -12,9 +12,10 @@ from classes import Queen
 from classes import King
 from classes import Pawn
 
+import time
 print("VISUAL TEST")
 
-
+time.sleep(50)
 def main():
 	game = Game()
 	
