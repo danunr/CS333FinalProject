@@ -24,8 +24,8 @@ jobs:
     - name: Run tests
       run:
         python3 -m unittest TestDriver.py
-        python3 -m coverage run TestDriver.py
-        python3 -m coverage report
+        coverage run TestDriver.py
+        #coverage report
 
   buildimage:
     runs-on: ubuntu-latest
