@@ -60,4 +60,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{IMAGE_NAME}}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
