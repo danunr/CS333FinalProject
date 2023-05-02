@@ -31,14 +31,13 @@ jobs:
       run:
         python -m unittest discover
         python -m coverage
-        #add to run
 
   env:
     IMAGE_NAME: CS333Final-Image
 
   build image:
     runs-on: ubuntu-latest
-    #requires: testing
+    requires: testing
     steps:
     - name: Checkout
       uses: actions/checkout@v3
