@@ -12,6 +12,8 @@ from classes import Queen
 from classes import King
 from classes import Pawn
 
+print("VISUAL TEST")
+
 
 def main():
 	game = Game()
