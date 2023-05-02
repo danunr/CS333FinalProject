@@ -13,9 +13,12 @@ from classes import King
 from classes import Pawn
 
 import time
-print("VISUAL TEST")
+
+print("VISUAL TEST RIGHT NOW")
 
 time.sleep(50)
+
+
 def main():
 	game = Game()
 	
