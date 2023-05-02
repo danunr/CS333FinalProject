@@ -30,8 +30,8 @@ jobs:
         coverage report
 
 
-  env:
-    IMAGE_NAME: CS333Final-Image
+#  env:
+#    IMAGE_NAME: CS333Final-Image
 
   build image:
     runs-on: ubuntu-latest
