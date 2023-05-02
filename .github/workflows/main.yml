@@ -38,7 +38,7 @@ jobs:
 
   build image:
     runs-on: ubuntu-latest
-    requires: testing
+    needs: testing
     steps:
     - name: Checkout
       uses: actions/checkout@v3
