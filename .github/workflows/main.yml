@@ -29,8 +29,9 @@ jobs:
         
     - name: Run tests
       run:
-        python -m unittest discover
-        python -m coverage
+        python3 -m unittest TestDriver.py
+        coverage run TestDriver.py
+        coverage report
 
   env:
     IMAGE_NAME: CS333Final-Image
