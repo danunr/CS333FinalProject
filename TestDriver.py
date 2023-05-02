@@ -1,4 +1,4 @@
-from TestUnit import testCases
+from Test import testCases
 
 test_case = testCases()
 
