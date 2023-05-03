@@ -1,3 +1,8 @@
+'''
+created by Github user: rsheldiii
+source: https://gist.github.com/rsheldiii/2993225
+'''
+
 class Game:
 	def __init__(self):
 		self.playersturn = "white"
